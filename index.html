@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body style="height: 100%;" id="body">
+
+	<div id="popupContainer" class="popup-container">
+		<div class="popup-content">
+			<h2>Welcome!</h2>
+			<p>Welcome to our website.</p>
+			<button id="gotItButton">Got It</button>
+		</div>
+	</div>
+
+	<div class="container" id="mainContent">
+		<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Logo</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+					aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span> Menu
+				</button>
+				<div class="collapse navbar-collapse" id="ftco-nav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="#" id="notes" class="nav-link nav-active">Notes</a>
+						</li>
+						<li class="nav-item"><a href="#" id="vital" class="nav-link">Vital Signs</a></li>
+						<li class="nav-item"><a href="#" id="labs" class="nav-link">Labs</a></li>
+						<li class="nav-item"><a href="#" id="image" class="nav-link">Images</a></li>
+						<li class="nav-item"><a href="#" id="encounters" class="nav-link">Encounters</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="notes-class" id="notes-class">
+			<div style="display: flex;">
+				<div class="left-menu">
+					<button id="add-item-btn">Add New Note</button>
+					<ul id="menu-list"></ul>
+				</div>
+				<div class="right-content">
+					<div id="notes-container"></div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div id="questions" style="display: none;">
+				<div id="question1" class="question">
+					<h4 id="question1-detail"></h4>
+					<textarea id="answer1" rows="3" placeholder="Type your answer"></textarea>
+				</div>
+
+				<div id="question2" class="question">
+					<h4 id="question2-detail"></h4>
+					<textarea id="answer2" rows="3" placeholder="Type your answer"></textarea>
+				</div>
+				<div id="question3" class="question">
+					<h4 id="question3-detail"></h4>
+					<textarea id="answer3" rows="3" placeholder="Type your answer"></textarea>
+				</div>
+
+				<div id="question4" class="question">
+					<h4 id="question4-detail"></h4>
+					<textarea id="answer4" rows="3" placeholder="Type your answer"></textarea>
+				</div>
+
+				<button class="next" onclick="saveAnswers()">Submit</button>
+			</div>
+
+			<div id="results" style="display:none;">
+				<h4>Results</h4>
+				<div id="result1"></div>
+				<div id="result2"></div>
+				<div id="result3"></div>
+				<div id="result4"></div>
+				<button id="Next-button" onclick="mcqScreen()" class="next">Next</button>
+			</div>
+			<div id="mcq" style="display: none;">
+
+				<h1>MCQs</h1>
+
+				<div id="quiz">
+					<div class="mcq-question">
+						<h5 id="mcq1"></h5>
+						<div class="options">
+							<label><input type="radio" name="q1" value="a"> a) London</label>
+							<label><input type="radio" name="q1" value="b"> b) Paris</label>
+							<label><input type="radio" name="q1" value="c"> c) Rome</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq2"></h5>
+						<div class="options">
+							<label><input type="radio" name="q2" value="a"> a) Paris</label>
+							<label><input type="radio" name="q2" value="b"> b) London</label>
+							<label><input type="radio" name="q2" value="c"> c) Jupiter</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq3"></h5>
+						<div class="options">
+							<label><input type="radio" name="q3" value="a"> a) London</label>
+							<label><input type="radio" name="q3" value="b"> b) Hyper Text Markup Language</label>
+							<label><input type="radio" name="q3" value="c"> c) Rome</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq4"></h5>
+						<div class="options">
+							<label><input type="radio" name="q4" value="a"> a) H2O</label>
+							<label><input type="radio" name="q4" value="b"> b) Pacific Ocean</label>
+							<label><input type="radio" name="q4" value="c"> c) JavaScript</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq5"></h5>
+						<div class="options">
+							<label><input type="radio" name="q5" value="a"> a) 12</label>
+							<label><input type="radio" name="q5" value="b"> b) Pacific Ocean</label>
+							<label><input type="radio" name="q5" value="c"> c) Rome</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq6"></h5>
+						<div class="options">
+							<label><input type="radio" name="q6" value="a"> a) Paris</label>
+							<label><input type="radio" name="q6" value="b"> b) London</label>
+							<label><input type="radio" name="q6" value="c"> c) JavaScript</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq7"></h5>
+						<div class="options">
+							<label><input type="radio" name="q7" value="a"> a) 12</label>
+							<label><input type="radio" name="q7" value="b"> b) Cascading Style Sheets</label>
+							<label><input type="radio" name="q7" value="c"> c) Rome</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq8"></h5>
+						<div class="options">
+							<label><input type="radio" name="q8" value="a"> a) Paris</label>
+							<label><input type="radio" name="q8" value="b"> b) London</label>
+							<label><input type="radio" name="q8" value="c"> c) 50</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq9"></h5>
+						<div class="options">
+							<label><input type="radio" name="q9" value="a"> a) London</label>
+							<label><input type="radio" name="q9" value="b"> b) Cascading Style Sheets</label>
+							<label><input type="radio" name="q9" value="c"> c) Rome</label>
+						</div>
+					</div>
+					<div class="mcq-question">
+						<h5 id="mcq10"></h5>
+						<div class="options">
+							<label><input type="radio" name="q10" value="a"> a) E=mc^2</label>
+							<label><input type="radio" name="q10" value="b"> b) London</label>
+							<label><input type="radio" name="q10" value="c"> c) Rome</label>
+						</div>
+					</div>
+
+
+					<!-- Repeat the above structure for the remaining questions -->
+
+				</div>
+
+				<button class="next" id="submitBtn">Submit</button>
+
+				<div id="mcq-results" style="display: none;">
+					<h2>Results</h2>
+					<div class="result">
+						<p>Question 1: Your answer was <span id="q1Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 2: Your answer was <span id="q2Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 3: Your answer was <span id="q3Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 4: Your answer was <span id="q4Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 5: Your answer was <span id="q5Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 6: Your answer was <span id="q6Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 7: Your answer was <span id="q7Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 8: Your answer was <span id="q8Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 9: Your answer was <span id="q9Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+					<div class="result">
+						<p>Question 10: Your answer was <span id="q10Result"></span>.</p>
+						<p>Explanation: It is a long established fact that a
+							reader will be distracted by the readable content
+							of a page when looking at its layout.</p>
+					</div>
+
+					<!-- Repeat the above structure for the remaining questions -->
+					<button class="next" id="goHome">Notes</button>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="vital-class" style="display: none;">Vital Signs</div>
+		<div class="labs-class" style="display: none;">Labs</div>
+		<div class="image-class" style="display: none;">Images</div>
+		<div class="encounters-class" style="display: none;">Encounters</div>
+	</div>
+
+	<div id="timer">04:00</div>
+
+
+	<script src="js/questions.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/notes.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
