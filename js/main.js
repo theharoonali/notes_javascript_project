@@ -72,7 +72,7 @@ function startTimer(duration, display) {
         i++;
       }
     }
-  }, 10);
+  }, 1000);
 }
 
 function hideContent() {
