@@ -10853,8 +10853,12 @@ h5,
 }
 
 .menu-item.active {
+  border: 1px solid #1c2938;
+  width: 160px;
+  padding: 15px;
+  background-color: #1c2938;
+  color: white;
   border-radius: 10px;
-  background-color: #ddd;
 }
 
 .notes {
@@ -10867,11 +10871,6 @@ h5,
 
 .nav-active {
   color: #fec771 !important;
-}
-
-.right-content {
-  padding: 10px 20px;
-  flex: 1;
 }
 
 .notes {
@@ -11045,13 +11044,37 @@ h1 {
 
 
 
+.left-menu {
+  width: 200px;
+}
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
 
+li {
+  cursor: pointer;
+  padding: 10px;
+}
 
+li.active {
+  border-radius: 10px;
+  background-color: #ccc;
+}
 
+.right-content {
+  padding: 5px 20px;
+  flex: 1;
+}
 
+.tab-content {
+  display: none;
+}
 
-
+.tab-content.active {
+  display: block;
+}
 
 h1 {
   text-align: center;

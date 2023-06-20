@@ -29,10 +29,10 @@ $(document).ready(function () {
   });
   $("#encounters").click(function () {
     $(".vital-class").hide();
-    $(".notes-class").hide();
+    $(".notes-class").show();
     $(".labs-class").hide();
     $(".image-class").hide();
-    $(".encounters-class").show();
+    $(".encounters-class").hide();
   });
 });
 let interval;
