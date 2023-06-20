@@ -73,7 +73,7 @@ function startTimer(duration, display) {
       }
 
     }
-  }, 10);
+  }, 1000);
 }
 
 function hideContent() {
