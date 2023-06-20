@@ -72,19 +72,40 @@ function startTimer(duration, display) {
         i++;
       }
     }
-  }, 1000);
+  }, 10);
 }
 
 function hideContent() {
-  var content = document.getElementById("notes-class");
-  content.style.display = "none";
-  var questions = document.getElementById("questions");
-  questions.style.display = "block";
+  resetDisplay();
+  document.getElementById("notes-class").style.display = "none";
+  document.getElementById("questions").style.display = "block";
   bodyElement.style.backgroundColor = "lightgrey";
   document.getElementById("ftco-navbar").style.display = "none";
   document.getElementById("timer").innerHTML = "5:00";
   startTimer(fiveMinutes, display);
 }
+
+function resetDisplay() {
+  const elements = document.querySelectorAll('.notes-class, .vital-class, .labs-class, .image-class, .encounters-class');
+  let hasBlock = false;
+
+  for (let i = 0; i < elements.length; i++) {
+    const computedStyle = window.getComputedStyle(elements[i]);
+    if (computedStyle.display === 'block') {
+      hasBlock = true;
+      break;
+    }
+  }
+
+  if (hasBlock) {
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].style.display = 'none';
+    }
+  }
+}
+
+
+
 var fiveMinutes = 4 * 60;
 var fourMinutes = 5 * 60;
 var fifMinutes = 14 * 60;
