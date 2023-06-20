@@ -29,10 +29,10 @@ $(document).ready(function () {
   });
   $("#encounters").click(function () {
     $(".vital-class").hide();
-    $(".notes-class").show();
+    $(".notes-class").hide();
     $(".labs-class").hide();
     $(".image-class").hide();
-    $(".encounters-class").hide();
+    $(".encounters-class").show();
   });
 });
 let interval;
@@ -72,7 +72,7 @@ function startTimer(duration, display) {
         i++;
       }
     }
-  }, 1000);
+  }, 10);
 }
 
 function hideContent() {

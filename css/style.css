@@ -11104,3 +11104,16 @@ h1 {
 .result p {
   margin-bottom: 5px;
 }
+
+.right-content {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.custom-tab-content {
+  display: none;
+}
+
+.custom-tab-content.active {
+  display: block;
+}

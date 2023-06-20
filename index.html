@@ -42,27 +42,27 @@
 		</nav>
 		<div class="notes-class" id="notes-class">
 			<div style="display: flex;">
-			<div class="left-menu">
-				<ul>
-				  <li class="tab active" onclick="changeTab(0)">Tab 1</li>
-				  <li class="tab" onclick="changeTab(1)">Tab 2</li>
-				  <li class="tab" onclick="changeTab(2)">Tab 3</li>
-				</ul>
-			  </div>
-			  <div class="right-content">
-				<div class="tab-content">
-				  <h2>Heading 1</h2>
-				  <p>Paragraph for Tab 1</p>
+				<div class="left-menu">
+					<ul>
+						<li class="tab active" onclick="changeTab(0)">Doctor 1</li>
+						<li class="tab" onclick="changeTab(1)">Doctor 2</li>
+						<li class="tab" onclick="changeTab(2)">Doctor 3</li>
+					</ul>
 				</div>
-				<div class="tab-content">
-				  <h2>Heading 2</h2>
-				  <p>Paragraph for Tab 2</p>
+				<div class="right-content">
+					<div class="tab-content">
+						<h2>Heading 1</h2>
+						<p>Paragraph for Tab 1</p>
+					</div>
+					<div class="tab-content">
+						<h2>Heading 2</h2>
+						<p>Paragraph for Tab 2</p>
+					</div>
+					<div class="tab-content">
+						<h2>Heading 3</h2>
+						<p>Paragraph for Tab 3</p>
+					</div>
 				</div>
-				<div class="tab-content">
-				  <h2>Heading 3</h2>
-				  <p>Paragraph for Tab 3</p>
-				</div>
-			  </div>
 			</div>
 		</div>
 
@@ -264,14 +264,37 @@
 		<div class="vital-class" style="display: none;">Vital Signs</div>
 		<div class="labs-class" style="display: none;">Labs</div>
 		<div class="image-class" style="display: none;">Images</div>
-		<div class="encounters-class" style="display: none;"></div>
+		<div class="encounters-class" style="display: none;">
+			<div style="display: flex;">
+				<div class="left-menu">
+					<ul>
+						<li class="custom-tab" onclick="changeCustomTab(0)">Encounters 1</li>
+						<li class="custom-tab" onclick="changeCustomTab(1)">Encounters 2</li>
+						<li class="custom-tab" onclick="changeCustomTab(2)">Encounters 3</li>
+					</ul>
+				</div>
+				<div class="right-content">
+					<div id="custom-tab-content-1" class="custom-tab-content">
+						<h2>Heading 1</h2>
+						<p>Paragraph for Encounters 1</p>
+					</div>
+					<div id="custom-tab-content-2" class="custom-tab-content">
+						<h2>Heading 2</h2>
+						<p>Paragraph for Encounters 2</p>
+					</div>
+					<div id="custom-tab-content-3" class="custom-tab-content">
+						<h2>Heading 3</h2>
+						<p>Paragraph for Encounters 3</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id="timer">04:00</div>
 
 
 	<script src="js/questions.js"></script>
-	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/notes.js"></script>
