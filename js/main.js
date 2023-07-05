@@ -69,10 +69,11 @@ function startTimer(duration, display) {
         return 0;
       }
       if (i === 3) {
+        submitQuiz();
         i++;
       }
     }
-  }, 1000);
+  }, 50);
 }
 
 function hideContent() {
