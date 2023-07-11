@@ -10954,9 +10954,6 @@ h5,
   cursor: pointer;
 }
 
-
-
-
 .question {
   margin-bottom: 0px;
 }
@@ -10966,10 +10963,11 @@ textarea {
   resize: vertical;
   padding: 10px;
   border-radius: 10px;
-  border-color: 1px solid  #fec771;
+  border-color: 1px solid #fec771;
 }
 
-#results,#mcq {
+#results,
+#mcq {
   background-color: #ffffff;
   padding: 20px;
   margin-top: 20px;
@@ -10979,7 +10977,6 @@ textarea {
 }
 
 #results h3 {
-
   margin-bottom: 10px;
 }
 
@@ -10988,12 +10985,10 @@ textarea {
 }
 
 #results div h4 {
-
   margin-bottom: 5px;
 }
 
-
-.submit-answer{
+.submit-answer {
   border: 1px solid #1c2938;
   width: 170px;
   padding: 15px;
@@ -11002,7 +10997,7 @@ textarea {
   border-radius: 10px;
 }
 
-.next{
+.next {
   width: 170px;
   padding: 15px;
   background-color: #1c2938;
@@ -11010,9 +11005,7 @@ textarea {
   border-radius: 10px;
 }
 
-
-
-#questions{
+#questions {
   background-color: #ffffff;
   padding: 20px;
   margin-top: 10px;
@@ -11041,8 +11034,6 @@ h1 {
 .result {
   margin-top: 10px;
 }
-
-
 
 .left-menu {
   width: 200px;
@@ -11116,4 +11107,39 @@ h1 {
 
 .custom-tab-content.active {
   display: block;
+}
+.table-border-css {
+  border: 1px solid lightgray;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  text-align: center;
+}
+.data-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column1 {
+  flex-basis: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+  .column1 {
+    flex-basis: 50%;
+  }
 }
