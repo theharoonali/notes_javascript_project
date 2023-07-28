@@ -73,16 +73,16 @@ function startTimer(duration, display) {
         i++;
       }
     }
-  }, 1000);
+  }, 10);
 }
 
 function hideContent() {
   resetDisplay();
-  document.getElementById("notes-class").style.display = "none";
+  document.getElementById("ftco-navbar").style.display = "none";
   document.getElementById("questions").style.display = "block";
   bodyElement.style.backgroundColor = "lightgrey";
-  document.getElementById("ftco-navbar").style.display = "none";
   document.getElementById("timer").innerHTML = "5:00";
+
   startTimer(fiveMinutes, display);
 }
 
