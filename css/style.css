@@ -107,7 +107,7 @@ h6 {
 }
 
 .container {
-  width: 80%; /* You can adjust this value to your preference */
+  width: 90%; /* You can adjust this value to your preference */
   max-width: 900px; /* Set a maximum width to prevent it from getting too wide on larger screens */
   margin: 0 auto; /* Center the container */
 }
