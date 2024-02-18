@@ -81,7 +81,7 @@ function hideContent() {
   document.getElementById("ftco-navbar").style.display = "none";
   document.getElementById("questions").style.display = "block";
   bodyElement.style.backgroundColor = "lightgrey";
-  document.getElementById("timer").innerHTML = "5:00";
+  document.getElementById("timer").innerHTML = "4:00";
 
   startTimer(fiveMinutes, display);
 }
