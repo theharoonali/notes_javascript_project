@@ -391,6 +391,17 @@ h5 {
   padding: 10px;
   border-radius: 5px;
 }
+
+#skipBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  font-size: 24px;
+  color: Green;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
 .popup-container {
   display: none;
   position: fixed;

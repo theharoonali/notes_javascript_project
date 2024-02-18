@@ -166,6 +166,7 @@ function saveAnswers() {
   document.getElementById("questions").style.display = "none";
   document.getElementById("results").style.display = "block";
   document.getElementById("timer").style.display = "none";
+  document.getElementById("skipBtn").style.display = "none";
   return 0;
 }
 
@@ -174,13 +175,14 @@ var q1 = (document.getElementById("question1-detail").innerHTML =
 var q2 = (document.getElementById("question2-detail").innerHTML =
   "Question:2 What is your hobby?");
 var q3 = (document.getElementById("question3-detail").innerHTML =
-  "Question:3 Write somrthing about your experience.");
+  "Question:3 Write something about your experience.");
 var q4 = (document.getElementById("question4-detail").innerHTML =
   "Question:4 Write about Gen-Z");
 
 function mcqScreen() {
   document.getElementById("results").style.display = "none";
   document.getElementById("timer").style.display = "block";
+  document.getElementById("skipBtn").style.display = "block";
   document.getElementById("timer").innerHTML = "14:00";
   startTimer(fifMinutes, display);
   document.getElementById("mcq").style.display = "block";
@@ -195,6 +197,7 @@ function submitQuiz() {
 
   // Hide the quiz and show the results
   document.getElementById("timer").style.display = "none";
+  document.getElementById("skipBtn").style.display = "none";
   quizElement.style.display = "none";
   submitButton.style.display = "none";
   resultsElement.style.display = "block";
@@ -290,3 +293,26 @@ submitButton.addEventListener("click", submitQuiz);
 
 var submitButton = document.getElementById("goHome");
 submitButton.addEventListener("click", goHome);
+
+document.getElementById("skipBtn").addEventListener("click", function () {
+  if (i <= 3) {
+    clearInterval(interval);
+    resetDisplay();
+    if (i === 1) {
+      clearInterval(interval);
+      console.log(interval);
+      hideContent();
+      i++;
+      return 0;
+    }
+    if (i === 2) {
+      clearInterval(interval);
+      saveAnswers();
+      i++;
+      return 0;
+    } else if (i === 3) {
+      submitQuiz();
+      i++;
+    }
+  }
+});
